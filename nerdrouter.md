@@ -1,6 +1,6 @@
 # Connect to the Nerd Router
 
-1. Connect to Infrustructure Wifi
+1. Connect to **Infrustructure** Wifi
 
 2. SSH to nerdrouter
 	* ```ssh nerdadmin@nerdrouter```
