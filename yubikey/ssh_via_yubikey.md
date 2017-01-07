@@ -32,8 +32,7 @@ These packages offer graphical methodologies for PIV generation as well as One-T
 
 
 ###Copy Public key to Destination
-	scp ~/.ssh/yubikey.pub USER@REMOTE_IP:/home/USER/.ssh/
-	ssh USER@REMOTE_IP 'cat ~/.ssh/yubikey.pub > ~/.ssh/authorized_keys;rm -rf ~/.ssh/yubikey.pub'
+	ssh-copy-id -i ~/.ssh/yubikey.pub USERNAME@REMOTE_HOST
 
 ####SELINUX####
 *On a few occasions, I've had to update permissions, update SELINUX, and restart sshd to get keys to work.*
