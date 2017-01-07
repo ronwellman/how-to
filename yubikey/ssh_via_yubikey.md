@@ -11,13 +11,15 @@ These packages offer graphical methodologies for PIV generation as well as One-T
 
 	sudo apt-get install -y yubikey-neo-manager yubikey-personalization yubikey-personalization-gui
 	
-###Generate Private Certificate
+###Generate Public Certificate
 	yubico-piv-tool -s 9a generate -o public.pem
 
 	
-###Self-Sign and Load Private Certificate
+###Self-Sign and Private Certificate
 	yubico-piv-tool -a verify-pin -P *PIN* -a selfsign-certificate -s 9a -S'/CN=SSH Key/' -i public.pem -o cert.pem
 
+###Load Certificate
+	yubico-piv-tool -a import-certificate -s 9a -i cert.pem
 	
 ###Generate Public key
 	ssh-keygen -D /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so > ~/.ssh/yubikey.pub
