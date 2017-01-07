@@ -1,11 +1,15 @@
 #Yubikey Setup for SSH
 
 
-###Required Repositories
-	sudo apt-add-repositories ppa:yubico/stable
+###Required Repositories and Packages
+	sudo add-apt-repositories ppa:yubico/stable
 	sudo apt-get update
-	sudo apt-get install -y opensc-pkcs11 yubico-piv-tool
+	sudo apt-get install -y opensc-pkcs11 yubico-piv-tool 
 
+#####Optional Packages
+These packages offer graphical methodologies for PIV generation as well as One-Time-Password / Static password generation
+
+	sudo apt-get install -y yubikey-neo-manager yubikey-personalization yubikey-personalization-gui
 	
 ###Generate Private Certificate
 	yubico-piv-tool -s 9a generate -o public.pem
@@ -31,6 +35,7 @@
 
 ####SELINUX####
 *On a few occasions, I've had to update permissions, update SELINUX, and restart sshd to get keys to work.*
+
 1. `chmod 700 ~/.ssh`
 1. `chmod 600 ~/.ssh/authorized_keys`
 1. `restorecon -Rv ~/.ssh`
