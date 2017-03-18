@@ -5,4 +5,7 @@ This repo will contain some of my non-sensitive how-to documents.  They may prov
 
 ####Documents
 1. Copying over of Clonezilla Images during PXE process
-2. Logging into the NERD router
+1. Logging into the NERD router
+1. Adding users to htpasswd
+1. Pfsense box repair after flash corruption
+1. Setting up my yubikey
