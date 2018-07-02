@@ -37,10 +37,9 @@ git push --mirror git@.........
 ```
 
 ### Recover From Bad Commit to a Feature (Use with caution - not completely tested)
-This assumes you're currently on a feature branch and want to save your work but killing off the old branch to begin again.
+This assumes you're currently on a feature branch and want to save your work by killing off the old branch to begin again.
 ```git
 git stash save 'LABEL/MESSAGE FOR THE STASH'
-git checkout OLD_COMMIT_ID
 git checkout dev
 git checkout -b NEW_FEATURE_BRANCH
 git stash list
