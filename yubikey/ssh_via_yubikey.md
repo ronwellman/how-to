@@ -2,7 +2,7 @@
 
 
 ### Required Repositories and Packages
-	sudo add-apt-repositories ppa:yubico/stable
+	sudo add-apt-repository ppa:yubico/stable
 	sudo apt-get update
 	sudo apt-get install -y opensc-pkcs11 yubico-piv-tool
 
@@ -12,7 +12,7 @@ These packages offer graphical methodologies for PIV generation as well as One-T
 	sudo apt-get install -y yubikey-neo-manager yubikey-personalization yubikey-personalization-gui
 
 ### Generate Public Certificate
-	yubico-piv-tool -s 9a generate -o public.pem
+	yubico-piv-tool -s 9a -a generate -o public.pem
 
 
 ### Self-Sign and Private Certificate
@@ -32,7 +32,7 @@ These packages offer graphical methodologies for PIV generation as well as One-T
 
 
 ### Copy Public key to Destination
-	ssh-copy-id -i ~/.ssh/yubikey.pub USERNAME@REMOTE_HOST
+	ssh-copy-id -f -i ~/.ssh/yubikey.pub USERNAME@REMOTE_HOST
 
 ### SELINUX
 On a few occasions, I've had to update permissions, update SELINUX, and restart sshd to get keys to work.
