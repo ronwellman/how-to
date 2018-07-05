@@ -1,5 +1,5 @@
 # Doxygen
-Auto generate some of the documentation for your project.
+Auto generate some of the documentation for your project.  I use doxygen to aid in the documentation of my C programs.  As of this writing, I am running Doxygen 1.8.13.
 
 ### Install
 ```bash
@@ -16,6 +16,14 @@ Now edit that config according to the options you want.  I typically turn off HT
 ```bash
 vi NEW_CONFIG_FILE
 ```
+I typically do the following:
+ - PROJECT_NAME     = "Something"
+ - HTML             = NO
+ - OUTPUT_DIRECTORY = ./doc/
+ - INPUT            = ./src/
+ - RECURSIVE        = TRUE
+
+I've had issues whenever my filenames have underscores in them.  I have more testing to do but it seems that when this happens, Doxygen sees the the file but does not capture my comments. Again, more testing needs to be completed to validate that this is what is actually causing my issues.
 
 ### Document Your Functions
 I typically do this inside of my .h file.
