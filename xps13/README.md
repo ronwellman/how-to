@@ -52,4 +52,4 @@ chmod u+x touchpad.sh
 ```
 
 ### Keyboard Shortcut
-Using the keyboard shortcuts menu, I was able to create a custom command mapped to the touchpad.sh file you just created.  I mapped my key to **<CTRL>+<ALT>+K**.  Now whenever I hit this sequence my touchpad is automatically disabled.  This allows me to write/develop without distractions.  This does not stop me from runnind a USB mouse if I need to and all I need to do is hit **<CTRL>+<ALT>+K** again to re-enable it.  I couldn't be happier with the effect.
+Using the keyboard shortcuts menu, I was able to create a custom command mapped to the touchpad.sh file you just created.  I mapped my key to **\<CTRL\>+\<ALT\>+K**.  Now whenever I hit this sequence my touchpad is automatically disabled.  This allows me to write/develop without distractions.  This does not stop me from runnind a USB mouse if I need to and all I need to do is hit **<CTRL>+<ALT>+K** again to re-enable it.  I couldn't be happier with the effect.
