@@ -32,8 +32,9 @@ git checkout --track -b dev origin/dev
 
 ### Clone Between Repositories
 ```git
-git clone --bare git@..........
-git push --mirror git@.........
+git clone --bare git@.........git
+cd ...git
+git push --mirror git@........git
 ```
 
 ### Recover From Bad Commit to a Feature (Use with caution - not completely tested)
