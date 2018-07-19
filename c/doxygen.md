@@ -3,7 +3,7 @@ Auto generate some of the documentation for your project.  I use doxygen to aid 
 
 ### Install
 ```bash
-sudo apt install doxygen
+sudo apt install doxygen graphviz
 ```
 
 ### Generate Config
