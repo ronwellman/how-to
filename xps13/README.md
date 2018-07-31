@@ -33,7 +33,7 @@ My XPS13 (9360) has a device id of 11 for Ubuntu Mate 18.04.
 #! /bin/bash
 
 # device 11 found with xinput command
-device=11
+device=$(xinput | grep Touchpad | cut -f 2 | cut -d'=' -f 2)
 
 # get state
 state=`xinput list-props "$device" | grep "Device Enabled" | grep -o "[01]$"`

@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # device 11 found with xinput command
-device=11
+device=$(xinput | grep Touchpad | cut -f 2 | cut -d'=' -f 2)
 
 # get the state
 state=`xinput list-props "$device" | grep "Device Enabled" | grep -o "[01]$"`
