@@ -37,6 +37,17 @@ cd ...git
 git push --mirror git@........git
 ```
 
+### Squash Repository History
+```git
+git checkout -- orphan temp_branch
+git add -A
+git commit -am 'Initial commit after squash.'
+git branch -D master
+gti branch -m master
+git push -f origin master
+git gc --aggressive --prune=all
+```
+
 ### Recover From Bad Commit to a Feature (Use with caution - not completely tested)
 This assumes you're currently on a feature branch and want to save your work by killing off the old branch to begin again.
 ```git
