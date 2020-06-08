@@ -76,16 +76,16 @@ git push origin dev
 
 
 ### Fix Commit History
-On a number of occasions I've forgotten to update my Gitconfig when jumping between different projects and so I commit to a work repository using my personal accounts.  I found this quick script that comes in handy when this happens.
+On a number of occasions I've forgotten to update my Gitconfig when jumping between different projects and so I commit to a work repository using my personal accounts.  I found [this](https://help.github.com/en/github/using-git/changing-author-info) quick script that comes in handy when this happens.
 
 ```
 #!/bin/sh
 
 git filter-branch --env-filter '
 
-OLD_EMAIL="invalid_email@invalid_email.invalid"
-CORRECT_NAME="correct name"
-CORRECT_EMAIL="correct_email@correct_email.correct"
+OLD_EMAIL="your-old-email@example.com"
+CORRECT_NAME="Your Correct Name"
+CORRECT_EMAIL="your-correct-email@example.com"
 
 if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
 then
