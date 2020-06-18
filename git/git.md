@@ -99,3 +99,10 @@ export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
 fi
 ' --tag-name-filter cat -- --branches --tags
 ```
+
+### Squash a couple of commits together
+Periodically you make a bunch of changes in order to get something to work and you'd like to combine all of those commits into one commit.
+
+```
+git rebase -i HEAD~X
+```
